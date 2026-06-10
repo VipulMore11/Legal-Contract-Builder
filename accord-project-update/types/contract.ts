@@ -30,10 +30,10 @@ export const CONTRACT_TYPES: ContractType[] = [
 ];
 
 export const STATUS_STYLES: Record<ContractStatus, string> = {
-  Draft:    'bg-yellow-500/20 text-yellow-300 border border-yellow-500/30',
-  Review:   'bg-blue-500/20   text-blue-300   border border-blue-500/30',
-  Signed:   'bg-green-500/20  text-green-300  border border-green-500/30',
-  Archived: 'bg-gray-500/20   text-gray-400   border border-gray-500/30',
+  Draft: 'bg-yellow-500/20 text-yellow-600 border border-yellow-500/30',
+  Review: 'bg-blue-500/20   text-blue-600   border border-blue-500/30',
+  Signed: 'bg-green-500/20  text-green-600  border border-green-500/30',
+  Archived: 'bg-gray-500/20   text-gray-600   border border-gray-500/30',
 };
 
 // ---------------------------------------------------------------------------

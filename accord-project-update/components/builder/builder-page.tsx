@@ -84,11 +84,11 @@ function nextStatus(s: ContractStatus): ContractStatus {
 type PanelId = "variables" | "clauses" | "properties" | "history" | "signatures";
 
 const PANEL_META: Record<PanelId, { label: string; icon: React.ElementType }> = {
-  variables:  { label: "Variables",    icon: Wand2 },
-  clauses:    { label: "Clauses",      icon: BookOpen },
-  signatures: { label: "Signatures",   icon: PenLine },
-  properties: { label: "Properties",   icon: Settings2 },
-  history:    { label: "History",      icon: History },
+  variables: { label: "Variables", icon: Wand2 },
+  clauses: { label: "Clauses", icon: BookOpen },
+  signatures: { label: "Signatures", icon: PenLine },
+  properties: { label: "Properties", icon: Settings2 },
+  history: { label: "History", icon: History },
 };
 
 // ---------------------------------------------------------------------------
@@ -399,7 +399,7 @@ export default function BuilderPage({ contractId }: { contractId: string }) {
           key={contract.id}
           defaultValue={contract.title}
           onBlur={(e) => handleTitleBlur(e.currentTarget.value)}
-          className="text-sm font-semibold bg-transparent text-foreground border-none outline-none min-w-0 flex-1 max-w-xs truncate placeholder:text-muted-foreground focus:bg-accent px-2 py-1 rounded-md transition-colors"
+          className="text-sm font-semibold bg-transparent text-foreground border border-input min-w-0 flex-1 max-w-xs truncate placeholder:text-muted-foreground focus:bg-accent px-2 py-1 rounded-md transition-colors"
           placeholder="Untitled Contract"
         />
 
@@ -440,7 +440,7 @@ export default function BuilderPage({ contractId }: { contractId: string }) {
         {/* Save Version */}
         <button
           onClick={() => setShowVersionDialog(true)}
-          className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-md text-muted-foreground hover:text-foreground hover:bg-accent border border-transparent hover:border-border transition-all text-xs shrink-0"
+          className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-md text-foreground bg-secondary hover:text-foreground hover:bg-secondary/80 border border-transparent hover:border-border transition-all text-xs shrink-0"
         >
           <GitBranch className="w-3.5 h-3.5" />
           <span className="hidden lg:inline">Version</span>
@@ -453,7 +453,7 @@ export default function BuilderPage({ contractId }: { contractId: string }) {
             "flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-all shrink-0",
             isDirty
               ? "bg-primary hover:bg-primary/90 text-primary-foreground"
-              : "bg-accent hover:bg-accent text-foreground border border-border"
+              : "bg-secondary hover:bg-secondary/80 text-secondary-foreground border border-border"
           )}
         >
           <Save className="w-3.5 h-3.5" />
@@ -1056,8 +1056,8 @@ function SignaturesPanel({ onInsert }: {
   };
 
   const tabs: { id: SigTab; icon: ReactNode; label: string }[] = [
-    { id: "draw",   icon: <PenLine className="w-3.5 h-3.5" />,  label: "Draw" },
-    { id: "type",   icon: <Type className="w-3.5 h-3.5" />,     label: "Type" },
+    { id: "draw", icon: <PenLine className="w-3.5 h-3.5" />, label: "Draw" },
+    { id: "type", icon: <Type className="w-3.5 h-3.5" />, label: "Type" },
     { id: "upload", icon: <ImageIcon className="w-3.5 h-3.5" />, label: "Upload" },
   ];
 
