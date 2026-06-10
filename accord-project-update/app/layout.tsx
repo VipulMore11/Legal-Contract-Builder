@@ -11,7 +11,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: 'lawsky - Legal Document Management',
-  description: 'Create, manage, and collaborate on legal documents with ease. Templates, clauses, versioning, and data models.',
+  description: 'Create, manage, and collaborate on legal documents with ease. Templates, clauses, and versioning.',
   generator: 'v0.app',
   icons: {
     icon: [

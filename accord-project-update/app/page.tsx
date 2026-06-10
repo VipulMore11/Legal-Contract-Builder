@@ -8,14 +8,13 @@ import ContractsList from "@/components/contracts/contracts-list";
 import ContractPicker from "@/components/contracts/contract-picker";
 import TemplateSelector from "@/components/templates/template-selector";
 import ClauseLibrary from "@/components/clauses/clause-library";
-import DataModelVisualizer from "@/components/data-model/data-model-visualizer";
 import VersionHistory from "@/components/contracts/version-history";
 import { Plus, FileText, Library } from "lucide-react";
 import { createNewContract, saveContract } from "@/lib/storage";
 import { templateBodyToTiptapJSON } from "@/lib/template-engine";
 import type { Template } from "@/types/template";
 
-type View = "dashboard" | "picker" | "templates" | "clauses" | "data-model" | "history";
+type View = "dashboard" | "picker" | "templates" | "clauses" | "history";
 
 export default function Home() {
   const router = useRouter();
@@ -105,9 +104,6 @@ export default function Home() {
 
       {/* ── Clause Library ──────────────────────────────────────────── */}
       {currentView === "clauses" && <ClauseLibrary />}
-
-      {/* ── Data Model ──────────────────────────────────────────────── */}
-      {currentView === "data-model" && <DataModelVisualizer />}
 
       {/* ── Version History ─────────────────────────────────────────── */}
       {currentView === "history" && (

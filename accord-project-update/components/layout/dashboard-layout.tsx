@@ -3,7 +3,6 @@ import {
   FileText,
   Library,
   Brain,
-  GitBranch,
   History,
   Menu,
 } from "lucide-react";
@@ -30,7 +29,6 @@ export default function DashboardLayout({
     { id: "editor", label: "Contract Editor", icon: FileText }, // routes to picker
     { id: "templates", label: "Templates", icon: Library },
     { id: "clauses", label: "Clause Library", icon: Brain },
-    { id: "data-model", label: "Data Model", icon: GitBranch },
     { id: "history", label: "Version History", icon: History },
   ];
 
