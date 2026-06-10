@@ -1,0 +1,414 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+    --font-heading: var(--font-sans);
+    --font-sans: var(--font-geist-sans), "Geist Fallback";
+    --font-mono: var(--font-geist-mono), "Geist Mono Fallback";
+    --color-sidebar-ring: var(--sidebar-ring);
+    --color-sidebar-border: var(--sidebar-border);
+    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+    --color-sidebar-accent: var(--sidebar-accent);
+    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+    --color-sidebar-primary: var(--sidebar-primary);
+    --color-sidebar-foreground: var(--sidebar-foreground);
+    --color-sidebar: var(--sidebar);
+    --color-chart-5: var(--chart-5);
+    --color-chart-4: var(--chart-4);
+    --color-chart-3: var(--chart-3);
+    --color-chart-2: var(--chart-2);
+    --color-chart-1: var(--chart-1);
+    --color-ring: var(--ring);
+    --color-input: var(--input);
+    --color-border: var(--border);
+    --color-destructive: var(--destructive);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-accent: var(--accent);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-muted: var(--muted);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-secondary: var(--secondary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-primary: var(--primary);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-popover: var(--popover);
+    --color-card-foreground: var(--card-foreground);
+    --color-card: var(--card);
+    --color-foreground: var(--foreground);
+    --color-background: var(--background);
+    --radius-sm: calc(var(--radius) * 0.6);
+    --radius-md: calc(var(--radius) * 0.8);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) * 1.4);
+    --radius-2xl: calc(var(--radius) * 1.8);
+    --radius-3xl: calc(var(--radius) * 2.2);
+    --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+    --background: #f4f9fa;
+    --foreground: #091e28;
+    --card: #ffffff;
+    --card-foreground: #091e28;
+    --popover: #ffffff;
+    --popover-foreground: #091e28;
+    --primary: #091e28;
+    --primary-foreground: #ffffff;
+    --secondary: #e2ecef;
+    --secondary-foreground: #091e28;
+    --muted: #e2ecef;
+    --muted-foreground: #5a7785;
+    --accent: #e2ecef;
+    --accent-foreground: #091e28;
+    --destructive: #ef4444;
+    --border: #d1e0e5;
+    --input: #d1e0e5;
+    --ring: #e2ecef;
+    --chart-1: #e2ecef;
+    --chart-2: #091e28;
+    --chart-3: #5a7785;
+    --chart-4: #e2ecef;
+    --chart-5: #10b981;
+    --radius: 0.625rem;
+    --sidebar: #ffffff;
+    --sidebar-foreground: #091e28;
+    --sidebar-primary: #091e28;
+    --sidebar-primary-foreground: #ffffff;
+    --sidebar-accent: #e2ecef;
+    --sidebar-accent-foreground: #091e28;
+    --sidebar-border: #d1e0e5;
+    --sidebar-ring: #e2ecef;
+}
+
+.dark {
+    --background: #f4f9fa;
+    --foreground: #091e28;
+    --card: #ffffff;
+    --card-foreground: #091e28;
+    --popover: #ffffff;
+    --popover-foreground: #091e28;
+    --primary: #091e28;
+    --primary-foreground: #ffffff;
+    --secondary: #e2ecef;
+    --secondary-foreground: #091e28;
+    --muted: #e2ecef;
+    --muted-foreground: #5a7785;
+    --accent: #e2ecef;
+    --accent-foreground: #091e28;
+    --destructive: #ef4444;
+    --border: #d1e0e5;
+    --input: #d1e0e5;
+    --ring: #e2ecef;
+    --chart-1: #e2ecef;
+    --chart-2: #091e28;
+    --chart-3: #5a7785;
+    --chart-4: #e2ecef;
+    --chart-5: #10b981;
+    --sidebar: #ffffff;
+    --sidebar-foreground: #091e28;
+    --sidebar-primary: #091e28;
+    --sidebar-primary-foreground: #ffffff;
+    --sidebar-accent: #e2ecef;
+    --sidebar-accent-foreground: #091e28;
+    --sidebar-border: #d1e0e5;
+    --sidebar-ring: #e2ecef;
+}
+
+@layer base {
+    * {
+        @apply border-border outline-ring/50;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
+    html {
+        @apply font-sans;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-serif;
+    }
+}
+
+/* ============================================================
+   Contract editor — Tiptap / ProseMirror styles
+   These apply inside the white page canvas (.contract-editor-content)
+   ============================================================ */
+
+.contract-editor-content {
+    outline: none;
+    color: #111827;
+    font-size: 12pt;
+    line-height: 1.6;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.contract-editor-content p {
+    margin: 0 0 0.6em;
+}
+
+.contract-editor-content h1 {
+    font-size: 2em;
+    font-weight: 700;
+    margin: 1em 0 0.5em;
+    line-height: 1.2;
+}
+.contract-editor-content h2 {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin: 0.9em 0 0.45em;
+    line-height: 1.3;
+}
+.contract-editor-content h3 {
+    font-size: 1.25em;
+    font-weight: 600;
+    margin: 0.8em 0 0.4em;
+}
+.contract-editor-content h4 {
+    font-size: 1.1em;
+    font-weight: 600;
+    margin: 0.7em 0 0.35em;
+}
+
+.contract-editor-content ul {
+    list-style: disc;
+    padding-left: 1.5em;
+    margin: 0.4em 0 0.6em;
+}
+.contract-editor-content ol {
+    list-style: decimal;
+    padding-left: 1.5em;
+    margin: 0.4em 0 0.6em;
+}
+.contract-editor-content li {
+    margin-bottom: 0.2em;
+}
+
+/* Task list */
+.contract-editor-content ul[data-type="taskList"] {
+    list-style: none;
+    padding-left: 0;
+}
+.contract-editor-content li[data-type="taskItem"] {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5em;
+}
+.contract-editor-content li[data-type="taskItem"] > label {
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+.contract-editor-content li[data-type="taskItem"] > div {
+    flex: 1;
+}
+
+/* Blockquote */
+.contract-editor-content blockquote {
+    border-left: 3px solid #9ca3af;
+    margin: 0.8em 0;
+    padding-left: 1em;
+    color: #4b5563;
+    font-style: italic;
+}
+
+/* Code */
+.contract-editor-content code {
+    background: #f3f4f6;
+    padding: 0.1em 0.3em;
+    border-radius: 3px;
+    font-family: "Courier New", monospace;
+    font-size: 0.9em;
+}
+.contract-editor-content pre {
+    background: #1f2937;
+    color: #f9fafb;
+    padding: 1em;
+    border-radius: 6px;
+    overflow-x: auto;
+    margin: 0.8em 0;
+}
+.contract-editor-content pre code {
+    background: none;
+    color: inherit;
+    padding: 0;
+}
+
+/* Horizontal rule */
+.contract-editor-content hr {
+    border: none;
+    border-top: 1px solid #d1d5db;
+    margin: 1.5em 0;
+}
+
+/* Links */
+.contract-editor-content a {
+    color: #2563eb;
+    text-decoration: underline;
+}
+
+/* Tables */
+.contract-editor-content table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0.8em 0;
+    font-size: 0.95em;
+}
+.contract-editor-content th {
+    background: #f3f4f6;
+    font-weight: 600;
+    text-align: left;
+    border: 1px solid #d1d5db;
+    padding: 8px 12px;
+}
+.contract-editor-content td {
+    border: 1px solid #d1d5db;
+    padding: 7px 12px;
+    vertical-align: top;
+}
+.contract-editor-content tr:nth-child(even) td {
+    background: #f9fafb;
+}
+/* Selected cell highlight */
+.contract-editor-content .selectedCell:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(59, 130, 246, 0.12);
+    pointer-events: none;
+}
+.contract-editor-content td,
+.contract-editor-content th {
+    position: relative;
+}
+/* Column resize handle */
+.contract-editor-content .column-resize-handle {
+    position: absolute;
+    right: -2px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #93c5fd;
+    cursor: col-resize;
+}
+
+/* Images */
+.contract-editor-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0.5em 0;
+}
+
+/* Placeholder */
+.contract-editor-content p.is-editor-empty:first-child::before {
+    content: attr(data-placeholder);
+    color: #9ca3af;
+    pointer-events: none;
+    float: left;
+    height: 0;
+}
+
+/* ============================================================
+   Print styles
+
+   Strategy: visibility isolation.
+   Everything on the page is made invisible, then only .page-canvas
+   and its descendants are made visible again.  .page-canvas is
+   then positioned at the document origin so it fills the paper.
+   @page margin: 0 means the contract’s own padding (set via
+   contract.pageMargins inline style) becomes the printed margin.
+   ============================================================ */
+
+@page {
+    margin: 0;
+    size: auto;
+}
+
+@media print {
+    /* 1. Wipe out every visible element on the page */
+    body * {
+        visibility: hidden !important;
+    }
+
+    /* 2. Reveal the document canvas and all its content */
+    .page-canvas,
+    .page-canvas * {
+        visibility: visible !important;
+    }
+
+    /* 3. Place the canvas at the document origin so it starts
+          at the top-left of the first printed page and flows
+          naturally across subsequent pages. */
+    .page-canvas {
+        position: absolute !important;
+        inset: 0 !important; /* left:0, top:0, right:0, bottom:auto */
+        width: 100% !important;
+        max-width: 100% !important;
+        min-height: 0 !important;
+        height: auto !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        margin: 0 !important;
+        /* The inline padding from contract.pageMargins is preserved
+           and acts as the true document margins on paper */
+    }
+
+    /* 4. Clean up html/body so they don’t clip or add colour */
+    html,
+    body {
+        background: white !important;
+        height: auto !important;
+        overflow: visible !important;
+    }
+
+    /* 5. Table resize handles are invisible anyway but remove them
+          so they can’t accidentally affect column widths */
+    .column-resize-handle {
+        display: none !important;
+    }
+}
+
+/* ============================================================
+   Template editor styles
+   ============================================================ */
+
+.template-token {
+    background: rgba(139, 92, 246, 0.25);
+    color: #c4b5fd;
+    border-radius: 3px;
+    padding: 0 3px;
+    font-family: monospace;
+    font-size: 0.88em;
+}
+
+.template-editor-root ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+.template-editor-root ::-webkit-scrollbar-track {
+    background: transparent;
+}
+.template-editor-root ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 9999px;
+}
+.template-editor-root ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+.template-editor-root textarea {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255,255,255,0.12) transparent;
+}
+
+/* ── Unfilled variable tokens in the live preview pane ── */
+.unfilled-preview-token {
+    background: rgba(251, 191, 36, 0.18);
+    color: #d97706;
+    border-radius: 3px;
+    padding: 0 3px;
+    font-family: monospace;
+    font-size: 0.88em;
+    font-style: normal;
+}
