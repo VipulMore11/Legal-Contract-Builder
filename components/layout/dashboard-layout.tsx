@@ -42,7 +42,7 @@ export default function DashboardLayout({
           <h1
             className={`font-bold text-xl text-primary ${!sidebarOpen && "hidden"}`}
           >
-            lawsky
+            Lawsky
           </h1>
           <Button
             variant="ghost"

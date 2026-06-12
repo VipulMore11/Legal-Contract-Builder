@@ -10,7 +10,7 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'lawsky - Legal Document Management',
+  title: 'Lawsky - Legal Document Management',
   description: 'Create, manage, and collaborate on legal documents with ease. Templates, clauses, and versioning.',
   generator: 'v0.app',
   icons: {

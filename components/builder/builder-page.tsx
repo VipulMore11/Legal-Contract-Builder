@@ -389,7 +389,7 @@ export default function BuilderPage({ contractId }: { contractId: string }) {
           title="Back to dashboard"
         >
           <ArrowLeft className="w-4 h-4" />
-          <span className="hidden sm:inline">lawsky</span>
+          <span className="hidden sm:inline">Lawsky</span>
         </button>
 
         <div className="w-px h-5 bg-accent shrink-0" />

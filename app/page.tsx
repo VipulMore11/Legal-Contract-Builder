@@ -60,7 +60,7 @@ export default function Home() {
         <div className="space-y-6">
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-3xl font-bold text-foreground">Welcome to lawsky</h1>
+              <h1 className="text-3xl font-bold text-foreground">Welcome to Lawsky</h1>
               <p className="text-muted-foreground mt-2">Manage, create, and collaborate on legal documents</p>
             </div>
             <Button onClick={handleNewContract} className="gap-2">
