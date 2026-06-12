@@ -27,7 +27,7 @@ Legal Contract Builder is a comprehensive legal document management system that 
 **Contract Builder / Editor**
 
 <div align="center">
-<img src="Images/Builder.png" alt="Contract Builder Screenshot" >
+<img src="Images/Builder1.png" alt="Contract Builder Screenshot" >
 </div>
 <div align="center">
 <img src="Images/Builder2.png" alt="Contract Builder Screenshot" >
