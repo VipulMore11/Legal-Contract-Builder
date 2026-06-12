@@ -9,10 +9,10 @@ Legal Contract Builder is a comprehensive legal document management system that 
 ## 🚀 Key Features
 
 - **Intelligent Contract Builder**: Rich text editor (powered by Tiptap) with auto-detectable variables and syntax highlighting.
+- **✨ AI Assistant (Gemini)**: Generate complete contracts from natural language prompts, automatically summarize complex clauses, and edit legal text conversationally inside the builder.
 - **Template Engine**: Quick-start from predefined, customizable legal templates.
 - **Clause Library**: Reusable clause snippets for fast document assembly and negotiation.
 - **Version History**: Keep track of every change made to your documents over time.
-
 
 ---
 
@@ -52,6 +52,7 @@ Legal Contract Builder is a comprehensive legal document management system that 
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS & shadcn/ui
 - **Rich Text Editor**: Tiptap (`@tiptap/react`, `@tiptap/starter-kit`)
+- **AI Integration**: Google Gemini API (`@google/genai`)
 - **Icons**: Lucide React
 - **State/Storage**: Client-side LocalStorage architecture Just For MVP
 
@@ -62,6 +63,7 @@ Legal Contract Builder is a comprehensive legal document management system that 
 ### Prerequisites
 - **Node.js** (v18.x or higher)
 - **npm**, **yarn**, **pnpm**, or **bun**
+- **Google Gemini API Key** (for AI features)
 
 ### Installation
 
@@ -78,14 +80,21 @@ Legal Contract Builder is a comprehensive legal document management system that 
    pnpm install
    ```
 
-3. **Start the development server:**
+3. **Configure Environment Variables:**
+   Copy the example environment file and add your Gemini API key:
+   ```bash
+   cp .env.example .env
+   ```
+   Open `.env` and add your key: `GEMINI_API_KEY=your_api_key_here`
+
+4. **Start the development server:**
    ```bash
    npm run dev
    # or
    pnpm dev
    ```
 
-4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the application.
+5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the application.
 
 ---
 

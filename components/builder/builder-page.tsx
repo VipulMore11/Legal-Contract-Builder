@@ -67,6 +67,9 @@ const CLAUSES: Clause[] = [
   { id: "4", title: "Limitation of Liability", category: "Legal", description: "Limits financial responsibility in case of disputes", content: "LIMITATION OF LIABILITY: In no event shall either party be liable for indirect, incidental, or consequential damages arising from this Agreement." },
   { id: "5", title: "Intellectual Property", category: "Legal", description: "Defines ownership of created work and materials", content: "INTELLECTUAL PROPERTY: All work product created under this Agreement shall be the exclusive property of [OWNER]." },
   { id: "6", title: "Non-Compete", category: "Legal", description: "Prevents parties from competing during and after agreement", content: "NON-COMPETE: During the term and for [PERIOD] after termination, neither party shall engage in competing activities." },
+  { id: "7", title: "Severability", category: "Legal", description: "Ensures agreement remains valid if one part is found unenforceable", content: "SEVERABILITY: If any provision of this Agreement is held to be invalid or unenforceable, the remaining provisions shall remain in full force and effect." },
+  { id: "8", title: "Governing Law", category: "Legal", description: "Specifies which jurisdiction's laws apply", content: "GOVERNING LAW: This Agreement shall be governed by and construed in accordance with the laws of [JURISDICTION]." },
+  { id: "9", title: "Force Majeure", category: "Operational", description: "Exempts parties from fulfilling obligations due to unforeseen events", content: "FORCE MAJEURE: Neither party shall be liable for any failure to perform its obligations where such failure is as a result of Acts of Nature, war, invasion, or other causes beyond reasonable control." },
 ];
 
 // ---------------------------------------------------------------------------

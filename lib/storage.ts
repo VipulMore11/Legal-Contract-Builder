@@ -210,6 +210,36 @@ const BUILT_IN_TEMPLATE_BODIES: Array<Omit<Template, "variables">> = [
     updatedAt: "2024-01-01T00:00:00Z",
     body: "# FREELANCE SERVICES AGREEMENT\n\nThis Agreement is made as of {{effectiveDate as \"D MMMM YYYY\"}} between {{clientName}}, located at {{clientAddress}} (\"Client\"), and {{freelancerName}}, located at {{freelancerAddress}} (\"Freelancer\").\n\n## 1. Scope of Work\n\nFreelancer agrees to deliver: {{projectDescription}}.\n\n## 2. Deliverables & Timeline\n\nThe project shall be completed by {{deliveryDate as \"D MMMM YYYY\"}}.\n\n## 3. Payment\n\nClient shall pay Freelancer a total fee of {{projectFee}}. A deposit of {{depositAmount}} is due upon signing.\n\n## 4. Revisions\n\nThis Agreement includes up to {{revisionRounds}} rounds of revisions. Additional revisions will be billed at {{hourlyRate}} per hour.\n\n## 5. Ownership\n\nUpon receipt of full payment, all intellectual property rights shall be transferred to Client.\n\n## 6. Independent Contractor\n\nFreelancer is an independent contractor and not an employee of Client.",
   },
+  {
+    id: "builtin-partnership",
+    name: "Partnership Agreement",
+    description: "Legal document that dictates the way a business is run and details the relationship between partners.",
+    category: "Business",
+    builtIn: true,
+    createdAt: "2024-01-01T00:00:00Z",
+    updatedAt: "2024-01-01T00:00:00Z",
+    body: "# PARTNERSHIP AGREEMENT\n\nThis Partnership Agreement is made on {{effectiveDate as \"D MMMM YYYY\"}} by and between {{partnerOneName}} and {{partnerTwoName}}.\n\n## 1. Name and Business\n\nThe parties hereby form a partnership under the name of {{partnershipName}} to conduct the business of {{businessDescription}}.\n\n## 2. Term\n\nThe partnership shall begin on {{startDate as \"D MMMM YYYY\"}} and shall continue until terminated.\n\n## 3. Capital Contributions\n\n{{partnerOneName}} shall contribute {{partnerOneContribution}} and {{partnerTwoName}} shall contribute {{partnerTwoContribution}}.\n\n## 4. Profit and Loss\n\nProfits and losses shall be divided equally between the partners.\n\n## 5. Management\n\nBoth partners shall have equal rights in the management of the partnership business.",
+  },
+  {
+    id: "builtin-terms-of-use",
+    name: "Website Terms of Use",
+    description: "Standard terms and conditions for users accessing a website or web application.",
+    category: "Legal",
+    builtIn: true,
+    createdAt: "2024-01-01T00:00:00Z",
+    updatedAt: "2024-01-01T00:00:00Z",
+    body: "# TERMS OF USE\n\nWelcome to {{websiteName}}. By accessing this website, we assume you accept these terms and conditions.\n\n## 1. License\n\nUnless otherwise stated, {{companyName}} owns the intellectual property rights for all material on {{websiteName}}.\n\n## 2. User Content\n\nParts of this website offer an opportunity for users to post and exchange opinions and information.\n\n## 3. Hyperlinking\n\nThe following organizations may link to our Website without prior written approval: Government agencies, Search engines, News organizations.\n\n## 4. Disclaimer\n\nTo the maximum extent permitted by applicable law, we exclude all representations, warranties, and conditions relating to our website and the use of this website.",
+  },
+  {
+    id: "builtin-commercial-lease",
+    name: "Commercial Lease Agreement",
+    description: "Contract for renting commercial property for business use.",
+    category: "Real Estate",
+    builtIn: true,
+    createdAt: "2024-01-01T00:00:00Z",
+    updatedAt: "2024-01-01T00:00:00Z",
+    body: "# COMMERCIAL LEASE AGREEMENT\n\nThis Lease Agreement is made on {{effectiveDate as \"D MMMM YYYY\"}}, between {{landlordName}} (\"Landlord\") and {{tenantName}} (\"Tenant\").\n\n## 1. Premises\n\nThe Landlord agrees to lease to the Tenant the property located at {{propertyAddress}}.\n\n## 2. Term\n\nThe lease term shall commence on {{leaseStartDate}} and terminate on {{leaseEndDate}}.\n\n## 3. Rent\n\nThe Tenant shall pay a monthly rent of {{monthlyRent}} on the 1st day of each month.\n\n## 4. Use of Premises\n\nThe Premises shall be used exclusively for {{permittedUse}}.\n\n## 5. Maintenance\n\nThe Tenant shall keep the Premises in good repair and condition.",
+  },
 ];
 
 function readAllTemplates(): Template[] {
