@@ -52,7 +52,6 @@ Legal Contract Builder is a comprehensive legal document management system that 
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS & shadcn/ui
 - **Rich Text Editor**: Tiptap (`@tiptap/react`, `@tiptap/starter-kit`)
-- **Code/Logic Editor**: Monaco Editor (`@monaco-editor/react`)
 - **Icons**: Lucide React
 - **State/Storage**: Client-side LocalStorage architecture Just For MVP
 
