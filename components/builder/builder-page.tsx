@@ -38,6 +38,7 @@ import { CONTRACT_TYPES, STATUS_STYLES } from "@/types/contract";
 import { formatDate, cn } from "@/lib/utils";
 import { buildVariables, formatValue, applyVariablesToTiptapJSON } from "@/lib/template-engine";
 import type { TemplateVariable, TemplateData } from "@/types/template";
+import AIChatPanel from "@/components/ai/ai-chat-panel";
 
 import {
   ArrowLeft, Save, GitBranch, X, Plus, RotateCcw, Eye, EyeOff,
@@ -81,9 +82,10 @@ function nextStatus(s: ContractStatus): ContractStatus {
 // Panel types
 // ---------------------------------------------------------------------------
 
-type PanelId = "variables" | "clauses" | "properties" | "history" | "signatures";
+type PanelId = "ai" | "variables" | "clauses" | "properties" | "history" | "signatures";
 
 const PANEL_META: Record<PanelId, { label: string; icon: React.ElementType }> = {
+  ai: { label: "AI Assistant", icon: Sparkles },
   variables: { label: "Variables", icon: Wand2 },
   clauses: { label: "Clauses", icon: BookOpen },
   signatures: { label: "Signatures", icon: PenLine },
@@ -103,7 +105,7 @@ export default function BuilderPage({ contractId }: { contractId: string }) {
   const [isDirty, setIsDirty] = useState(false);
 
   // ── Panel state ───────────────────────────────────────────────────────────
-  const [activePanel, setActivePanel] = useState<PanelId | null>("variables");
+  const [activePanel, setActivePanel] = useState<PanelId | null>("ai");
   const [showPreview, setShowPreview] = useState(true);
   const PANEL_W = 280;
 
@@ -569,6 +571,12 @@ export default function BuilderPage({ contractId }: { contractId: string }) {
 
             {/* Panel content */}
             <div className="flex-1 overflow-hidden">
+              {activePanel === "ai" && (
+                <AIChatPanel
+                  editor={editor}
+                  documentText={rawEditorText}
+                />
+              )}
               {activePanel === "variables" && (
                 <VariablesPanel
                   variables={detectedVariables}

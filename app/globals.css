@@ -412,3 +412,96 @@
     font-size: 0.88em;
     font-style: normal;
 }
+
+/* ============================================================
+   AI Assistant styles
+   ============================================================ */
+
+/* Pulsing glow around AI icon */
+.ai-glow {
+    box-shadow: 0 0 8px rgba(139, 92, 246, 0.35), 0 0 20px rgba(139, 92, 246, 0.15);
+    animation: ai-glow-pulse 2.5s ease-in-out infinite;
+}
+@keyframes ai-glow-pulse {
+    0%, 100% { box-shadow: 0 0 8px rgba(139, 92, 246, 0.35), 0 0 20px rgba(139, 92, 246, 0.15); }
+    50% { box-shadow: 0 0 14px rgba(139, 92, 246, 0.5), 0 0 30px rgba(139, 92, 246, 0.25); }
+}
+
+/* Typing indicator dots */
+.ai-typing-indicator .ai-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #8b5cf6;
+    display: inline-block;
+    animation: ai-dot-bounce 1.4s ease-in-out infinite;
+}
+.ai-typing-indicator .ai-dot:nth-child(2) { animation-delay: 0.16s; }
+.ai-typing-indicator .ai-dot:nth-child(3) { animation-delay: 0.32s; }
+@keyframes ai-dot-bounce {
+    0%, 80%, 100% { transform: translateY(0); opacity: 0.4; }
+    40% { transform: translateY(-6px); opacity: 1; }
+}
+
+/* Gradient text for AI branding */
+.ai-gradient-text {
+    background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 50%, #818cf8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Chat bubble styles */
+.ai-message-user {
+    border-radius: 16px 16px 4px 16px;
+}
+.ai-message-ai {
+    border-radius: 16px 16px 16px 4px;
+}
+
+/* Quick action chip hover */
+.ai-chip {
+    transition: all 0.2s ease;
+}
+.ai-chip:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.1);
+}
+.ai-chip:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+/* AI content text */
+.ai-content {
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+.ai-content::-webkit-scrollbar {
+    width: 4px;
+}
+.ai-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+.ai-content::-webkit-scrollbar-thumb {
+    background: rgba(139, 92, 246, 0.2);
+    border-radius: 9999px;
+}
+
+/* AI activity bar icon glow indicator */
+.ai-activity-icon {
+    position: relative;
+}
+.ai-activity-icon::after {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.3), rgba(99, 102, 241, 0.3));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+.ai-activity-icon:hover::after,
+.ai-activity-icon.active::after {
+    opacity: 1;
+}
